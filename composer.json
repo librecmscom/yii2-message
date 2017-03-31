@@ -1,0 +1,23 @@
+{
+    "name": "yuncms/yii2-message",
+    "description": "The message module for Yii",
+    "keywords": ["yii2", "yii2-message", "message management"],
+    "type": "yii2-extension",
+    "license": "MIT",
+    "require": {
+        "yiisoft/yii2": "~2.0",
+        "yiisoft/yii2-swiftmailer": "~2.0",
+        "yiisoft/yii2-bootstrap": "~2.0",
+        "yuncms/yii2-user": "~1.0 | dev-master",
+    },
+    "require-dev": {
+        "yiisoft/yii2-codeception": "^2.0.0",
+        "codeception/specify": "^0.4.3",
+        "codeception/verify": "^0.3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "yuncms\\message\\": ""
+        }
+    }
+}
