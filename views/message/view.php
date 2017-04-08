@@ -20,7 +20,7 @@ if ($model->isRecipient()) {//收件人是自己
 <div class="row">
     <div class="col-xs-12 col-md-9 main">
         <h2 class="h3 profile-title">
-            <?= Yii::t('user', 'Dialogue in {dialogue}', ['dialogue' => $dialogue]); ?>
+            <?= Yii::t('message', 'Dialogue in {dialogue}', ['dialogue' => $dialogue]); ?>
             <div class="pull-right">
                 <a class="btn btn-primary"
                    href="<?= Url::to(['/message/message/index']); ?>"><?= Yii::t('message', 'Back to message list'); ?></a>
@@ -46,7 +46,7 @@ if ($model->isRecipient()) {//收件人是自己
                 <?= $form->field($formModel, 'parent', ['template' => '{input}'])->hiddenInput() ?>
                 <?= $form->field($formModel, 'message')->textarea() ?>
                 <div class="form-group">
-                    <span class="send-tip stp2"><?= Yii::t('user', 'Click the SEND button to send the message'); ?></span>
+                    <span class="send-tip stp2"><?= Yii::t('message', 'Click the SEND button to send the message'); ?></span>
                     <div class="pull-right">
                         <button type="reset" class="btn btn-primary resetbtn"><?= Yii::t('message', 'Reset'); ?></button>
                         <button type="submit" class="btn btn-primary"><?= Yii::t('message', 'Send') ?></button>

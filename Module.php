@@ -28,16 +28,14 @@ class Module extends \yii\gii\Module
     /**
      * @var array Mailer configuration
      */
-    public $mailViewPath = '@yuncms/wallet/views/mail';
+    public $mailViewPath = '@yuncms/message/views/mail';
 
     /**
      * @var string|array Default: `Yii::$app->params['adminEmail']` OR `no-reply@example.com`
      */
     public $mailSender;
 
-    /**
-     * @throws InvalidConfigException
-     */
+
     public function init()
     {
         parent::init();

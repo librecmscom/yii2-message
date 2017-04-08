@@ -3,10 +3,10 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 if ($model->isRecipient()) {//收件人是自己 别人对你说
     $form = Html::a($model->from->username, ['/user/profile/view', 'id' => $model->from_id], ['rel' => 'author']);
-    $to = Html::a(Yii::t('user', 'You'), ['/user/profile/view', 'id' => $model->user_id], ['rel' => 'author']);
+    $to = Html::a(Yii::t('message', 'You'), ['/user/profile/view', 'id' => $model->user_id], ['rel' => 'author']);
 
 } else {//你对别人说
-    $form = Html::a(Yii::t('user', 'You'), ['/user/profile/view', 'id' => $model->from_id], ['rel' => 'author']);
+    $form = Html::a(Yii::t('message', 'You'), ['/user/profile/view', 'id' => $model->from_id], ['rel' => 'author']);
     $to = Html::a($model->user->username, ['/user/profile/view', 'id' => $model->user_id], ['rel' => 'author']);
 }
 ?>
@@ -18,7 +18,7 @@ if ($model->isRecipient()) {//收件人是自己 别人对你说
 
 <div class="media-body">
     <div class="media-heading">
-        <?= Yii::t('user', '{form} say to {to}', ['form' => $form, 'to' => $to,]); ?>
+        <?= Yii::t('message', '{form} say to {to}', ['form' => $form, 'to' => $to,]); ?>
         <?php if($model->isRecipient() && !$model->isRead()):?>
             <?php $model->setRead();?>
         <span class="badge" style="background-color: #f52c32">new</span>

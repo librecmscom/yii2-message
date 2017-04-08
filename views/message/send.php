@@ -15,7 +15,7 @@ $this->title = Yii::t('message', 'Send Message');
         <h2 class="h3 profile-title">
             <?= Yii::t('message', 'Send Message'); ?>
             <div class="pull-right">
-                <a class="btn btn-primary" href="<?= Url::to(['/message/message/index']); ?>"><?= Yii::t('user', 'Back to message list'); ?></a>
+                <a class="btn btn-primary" href="<?= Url::to(['/message/message/index']); ?>"><?= Yii::t('message', 'Back to message list'); ?></a>
             </div>
         </h2>
         <div class="row">

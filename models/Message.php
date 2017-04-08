@@ -59,7 +59,7 @@ class Message extends ActiveRecord
             [['from_id', 'user_id', 'status', 'created_at', 'updated_at'], 'integer'],
             [['message'], 'string', 'max' => 750],
             [['status'], 'default', 'value' => static::STATUS_NEW],
-            ['status', 'in', 'range' => [static::STATUS_NEW, static::STATUS_READ], 'message' => Yii::t('user', 'Incorrect status')],
+            ['status', 'in', 'range' => [static::STATUS_NEW, static::STATUS_READ], 'message' => Yii::t('message', 'Incorrect status')],
         ];
     }
 
