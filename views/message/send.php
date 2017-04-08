@@ -24,13 +24,13 @@ $this->title = Yii::t('message', 'Send Message');
                 <?= $form->field($model, 'username')->label(Yii::t('message','Username'))->input('', ['placeholder' => Yii::t('message','Please enter a user name')]); ?>
                 <?= $form->field($model, 'message')->label(Yii::t('message','Message content'))->textarea(['placeholder' => Yii::t('message','Please enter the message content')]) ?>
                 <div class="form-group">
-                    <?= Html::submitButton(Yii::t('message','Send Message'), ['class' => 'btn btn-block btn-primary']) ?>
+                    <?= Html::submitButton(Yii::t('message','Send Message'), ['class' => 'btn btn-primary']) ?>
                 </div>
                 <?php ActiveForm::end(); ?>
             </div>
         </div>
     </div>
     <div class="col-xs-12 col-md-3 side">
-        <?= $this->render('/_right_menu') ?>
+        <?= $this->render('@yuncms/user/views/_right_menu') ?>
     </div>
 </div>

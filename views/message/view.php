@@ -57,6 +57,6 @@ if ($model->isRecipient()) {//收件人是自己
         </div>
     </div>
     <div class="col-xs-12 col-md-3 side">
-        <?= $this->render('/_right_menu') ?>
+        <?= $this->render('@yuncms/user/views/_right_menu') ?>
     </div>
 </div>

@@ -9,7 +9,7 @@ $this->title = Yii::t('message', 'My Message Inbox');
 <div class="row">
     <div class="col-xs-12 col-md-9 main">
         <h2 class="h3 profile-title">
-            <?= Yii::t('user', 'My Message') ?>
+            <?= Yii::t('message', 'My Message') ?>
             <div class="pull-right">
                 <a class="btn btn-primary" href="<?= Url::to(['/message/message/send']); ?>" data-method="post"><?= Yii::t('message', 'New Message'); ?></a>
             </div>
@@ -31,6 +31,6 @@ $this->title = Yii::t('message', 'My Message Inbox');
     </div>
 
     <div class="col-xs-12 col-md-3 side">
-        <?= $this->render('/_right_menu') ?>
+        <?= $this->render('@yuncms/user/views/_right_menu') ?>
     </div>
 </div>
