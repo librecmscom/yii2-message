@@ -4,7 +4,7 @@
  */
 function getUnreadMessages(callback) {
     callback = callback || jQuery.noop;
-    jQuery.getJSON("/user/message/unread-messages", function (result) {
+    jQuery.getJSON("/message/message/unread-messages", function (result) {
         return callback(result.total);
     });
 }
