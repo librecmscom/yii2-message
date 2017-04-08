@@ -23,6 +23,10 @@ class M170206090415Create_message_table extends Migration
             'created_at' => $this->integer()->notNull(),
             'updated_at' => $this->integer()->notNull()
         ], $tableOptions);
+
+        $this->addForeignKey('{{%message_ibfk_1}}', '{{%message}}', 'from_id', '{{%user}}', 'id', 'CASCADE', 'RESTRICT');
+        $this->addForeignKey('{{%message_ibfk_2}}', '{{%message}}', 'user_id', '{{%user}}', 'id', 'CASCADE', 'RESTRICT');
+
     }
 
     public function down()
