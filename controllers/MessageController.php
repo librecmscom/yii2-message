@@ -73,7 +73,7 @@ class MessageController extends Controller
     {
         $model = new MessageSendForm();
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['/message/message/index']);
+            return $this->redirect(['index']);
         }
         return $this->render('send', ['model' => $model]);
     }
