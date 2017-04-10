@@ -12,7 +12,7 @@ use Yii;
  * Class Module
  * @package yuncms\message
  */
-class Module extends \yii\gii\Module
+class Module extends \yii\base\Module
 {
     public $controllerNamespace = 'yuncms\message\controllers';
 
