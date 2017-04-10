@@ -19,7 +19,7 @@ class Asset extends AssetBundle
 
 
     public $js = [
-        'js/message.js',
+        'message.js',
     ];
 
     public $depends = [
