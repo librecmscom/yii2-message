@@ -8,7 +8,7 @@
         "yiisoft/yii2": "~2.0",
         "yiisoft/yii2-swiftmailer": "~2.0",
         "yiisoft/yii2-bootstrap": "~2.0",
-        "yuncms/yii2-user": "~1.0 | dev-master"
+        "yuncms/yii2-user": "~1.0"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "^2.0.0",
