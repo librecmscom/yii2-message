@@ -2,16 +2,16 @@
 use yii\helpers\Html;
 use yii\helpers\Url;
 if ($model->isRecipient()) {//收件人是自己 别人对你说
-    $form = Html::a($model->from->username, ['/user/profile/view', 'id' => $model->from_id], ['rel' => 'author']);
-    $to = Html::a(Yii::t('message', 'You'), ['/user/profile/view', 'id' => $model->user_id], ['rel' => 'author']);
+    $form = Html::a($model->from->username, ['/user/space/view', 'id' => $model->from_id], ['rel' => 'author']);
+    $to = Html::a(Yii::t('message', 'You'), ['/user/space/view', 'id' => $model->user_id], ['rel' => 'author']);
 
 } else {//你对别人说
-    $form = Html::a(Yii::t('message', 'You'), ['/user/profile/view', 'id' => $model->from_id], ['rel' => 'author']);
+    $form = Html::a(Yii::t('message', 'You'), ['/user/space/view', 'id' => $model->from_id], ['rel' => 'author']);
     $to = Html::a($model->user->username, ['/user/profile/view', 'id' => $model->user_id], ['rel' => 'author']);
 }
 ?>
 <div class="media-left">
-    <a href="<?= Url::to(['/user/profile/view', 'id' => $model->from_id]); ?>" rel="author">
+    <a href="<?= Url::to(['/user/space/view', 'id' => $model->from_id]); ?>" rel="author">
         <img class="media-object" src="<?= $model->from->getAvatar('small'); ?>" alt="utf-8">
     </a>
 </div>
