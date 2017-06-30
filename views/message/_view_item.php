@@ -7,7 +7,7 @@ if ($model->isRecipient()) {//收件人是自己 别人对你说
 
 } else {//你对别人说
     $form = Html::a(Yii::t('message', 'You'), ['/user/space/view', 'id' => $model->from_id], ['rel' => 'author']);
-    $to = Html::a($model->user->username, ['/user/profile/view', 'id' => $model->user_id], ['rel' => 'author']);
+    $to = Html::a($model->user->username, ['/user/space/view', 'id' => $model->user_id], ['rel' => 'author']);
 }
 ?>
 <div class="media-left">

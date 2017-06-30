@@ -8,16 +8,16 @@ use yuncms\message\models\Message;
 $message = $model->lastMessage;
 
 if ($message->isRecipient()) {//收件人是自己 别人对你说
-    $form = Html::a($message->from->username, ['/user/profile/view', 'id' => $message->from_id], ['rel' => 'author']);
-    $to = Html::a(Yii::t('message', 'You'), ['/user/profile/view', 'id' => $message->user_id], ['rel' => 'author']);
+    $form = Html::a($message->from->username, ['/user/space/view', 'id' => $message->from_id], ['rel' => 'author']);
+    $to = Html::a(Yii::t('message', 'You'), ['/user/space/view', 'id' => $message->user_id], ['rel' => 'author']);
 } else {//你对别人说
-    $form = Html::a(Yii::t('message', 'You'), ['/user/profile/view', 'id' => $message->from_id], ['rel' => 'author']);
-    $to = Html::a($message->user->username, ['/user/profile/view', 'id' => $message->user_id], ['rel' => 'author']);
+    $form = Html::a(Yii::t('message', 'You'), ['/user/space/view', 'id' => $message->from_id], ['rel' => 'author']);
+    $to = Html::a($message->user->username, ['/user/space/view', 'id' => $message->user_id], ['rel' => 'author']);
 }
 ?>
 
 <div class="media-left">
-    <a href="<?= Url::to(['/user/profile/view', 'id' => $message->from_id]); ?>" rel="author">
+    <a href="<?= Url::to(['/user/space/view', 'id' => $message->from_id]); ?>" rel="author">
         <img class="media-object" src="<?= $message->from->getAvatar('small'); ?>" alt="utf-8">
     </a>
 </div>
