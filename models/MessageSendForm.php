@@ -24,7 +24,7 @@ class MessageSendForm extends Model
     /**
      * @var string 用户名
      */
-    public $username;
+    public $name;
 
     /**
      * @var string 消息内容

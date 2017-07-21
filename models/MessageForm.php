@@ -19,7 +19,7 @@ class MessageForm extends Model
 
     public $parent;
     public $message;
-    public $username;
+    public $name;
 
     /**
      * @inheritdoc
@@ -64,7 +64,7 @@ class MessageForm extends Model
             } else {
                 /** @var \yuncms\user\models\User $userClass */
                 $userClass = Yii::$app->user->identityClass;
-                $user = $userClass::findByUsername($this->username);
+                $user = $userClass::findByUsername($this->name);
                 $new->user_id = $user->id;
             }
             return $new->save();

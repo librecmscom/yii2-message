@@ -31,6 +31,6 @@ $this->title = Yii::t('message', 'My Message Inbox');
     </div>
 
     <div class="col-xs-12 col-md-3 side">
-        <?= $this->render('@yuncms/user/views/_right_menu') ?>
+        <?= $this->render('@yuncms/user/frontend/views/_right_menu') ?>
     </div>
 </div>

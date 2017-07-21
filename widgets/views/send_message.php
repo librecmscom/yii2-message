@@ -7,7 +7,7 @@ use yii\widgets\ActiveForm;
     'id' => 'message-form',
     'action' => ['/message/message/send']
 ]); ?>
-<?= $form->field($model, 'username')->label(false)->hiddenInput(); ?>
+<?= $form->field($model, 'name')->label(false)->hiddenInput(); ?>
 <?= $form->field($model, 'message')->label(false)->textarea(['class' => 'form-control']) ?>
 
 <?= Html::submitButton(Yii::t('message', 'Send'), ['class' => 'btn btn-primary']) ?>
