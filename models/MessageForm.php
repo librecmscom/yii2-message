@@ -33,7 +33,7 @@ class MessageForm extends Model
             ['parent', 'filter', 'filter' => 'trim'],
             ['parent', 'required'],
 
-            ['username', 'filter', 'filter' => 'trim'],
+            ['name', 'filter', 'filter' => 'trim'],
         ];
     }
 

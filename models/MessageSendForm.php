@@ -39,9 +39,9 @@ class MessageSendForm extends Model
     public function rules()
     {
         return [
-            [['message', 'username'], 'required'],
-            [['username', 'message'], 'filter', 'filter' => 'trim'],
-            ['username', 'validateUsername'],
+            [['message', 'name'], 'required'],
+            [['name', 'message'], 'filter', 'filter' => 'trim'],
+            ['name', 'validateUsername'],
         ];
     }
 
@@ -101,7 +101,7 @@ class MessageSendForm extends Model
     {
         if ($this->_user === null) {
             $userClass = Yii::$app->user->identityClass;
-            $this->_user = $userClass::findOne(['username'=>$this->username]);
+            $this->_user = $userClass::findOne(['name'=>$this->name]);
         }
         return $this->_user;
     }
