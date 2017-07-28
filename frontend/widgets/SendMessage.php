@@ -1,11 +1,15 @@
 <?php
 
-namespace yuncms\message\widgets;
+namespace yuncms\message\frontend\widgets;
 
 use yii\base\Widget;
 use yii\base\InvalidConfigException;
-use yuncms\message\models\MessageSendForm;
+use yuncms\message\widgets\models\MessageSendForm;
 
+/**
+ * Class SendMessage
+ * @package yuncms\message\frontend\widgets
+ */
 class SendMessage extends Widget
 {
     /** @var bool */

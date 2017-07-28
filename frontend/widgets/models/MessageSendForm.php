@@ -4,10 +4,11 @@
  * @copyright Copyright (c) 2012 TintSoft Technology Co. Ltd.
  * @license http://www.tintsoft.com/license/
  */
-namespace yuncms\message\models;
+namespace yuncms\message\widgets\models;
 
 use Yii;
 use yii\base\Model;
+use yuncms\message\models\Message;
 
 /**
  * Class MessageSendForm

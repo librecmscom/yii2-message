@@ -5,10 +5,11 @@
  * @license http://www.tintsoft.com/license/
  */
 
-namespace yuncms\message\models;
+namespace yuncms\message\frontend\models;
 
 use Yii;
 use yii\base\Model;
+use yuncms\message\models\Message;
 
 /**
  * Class MessageForm
@@ -47,6 +48,9 @@ class MessageForm extends Model
         ];
     }
 
+    /**
+     * @return bool
+     */
     public function save()
     {
         if ($this->validate()) {
@@ -64,7 +68,7 @@ class MessageForm extends Model
             } else {
                 /** @var \yuncms\user\models\User $userClass */
                 $userClass = Yii::$app->user->identityClass;
-                $user = $userClass::findByUsername($this->name);
+                $user = $userClass::findByEmailOrMobile($this->name);
                 $new->user_id = $user->id;
             }
             return $new->save();

@@ -5,7 +5,7 @@
  * @license http://www.tintsoft.com/license/
  */
 
-namespace yuncms\message\controllers;
+namespace yuncms\message\frontend\controllers;
 
 use Yii;
 use yii\web\Response;
@@ -14,8 +14,8 @@ use yii\data\ActiveDataProvider;
 use yii\filters\AccessControl;
 use yii\web\NotFoundHttpException;
 use yuncms\message\models\Message;
-use yuncms\message\models\MessageForm;
-use yuncms\message\models\MessageSendForm;
+use yuncms\message\frontend\models\MessageForm;
+use yuncms\message\frontend\models\MessageSendForm;
 
 /**
  * Class MessageController

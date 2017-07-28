@@ -14,8 +14,6 @@ use Yii;
  */
 class Module extends \yii\base\Module
 {
-    public $controllerNamespace = 'yuncms\message\controllers';
-
     /**
      * @var string the default route of this module. Defaults to `default`.
      * The route may consist of child module ID, controller ID, and/or action ID.
@@ -28,7 +26,7 @@ class Module extends \yii\base\Module
     /**
      * @var array Mailer configuration
      */
-    public $mailViewPath = '@yuncms/message/views/mail';
+    public $mailViewPath = '@yuncms/message/mail';
 
     /**
      * @var string|array Default: `Yii::$app->params['adminEmail']` OR `no-reply@example.com`

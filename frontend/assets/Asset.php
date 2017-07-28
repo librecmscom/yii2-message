@@ -4,7 +4,7 @@
  * @copyright Copyright (c) 2012 TintSoft Technology Co. Ltd.
  * @license http://www.tintsoft.com/license/
  */
-namespace yuncms\message;
+namespace yuncms\message\frontend\assets;
 
 use yii\web\AssetBundle;
 
@@ -15,7 +15,7 @@ use yii\web\AssetBundle;
  */
 class Asset extends AssetBundle
 {
-    public $sourcePath = '@vendor/yuncms/yii2-message/assets';
+    public $sourcePath = '@yuncms/message/frontend/views/assets';
 
 
     public $js = [
