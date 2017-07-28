@@ -8,11 +8,11 @@ use yuncms\message\models\Message;
 $message = $model->lastMessage;
 
 if ($message->isRecipient()) {//收件人是自己 别人对你说
-    $form = Html::a($message->from->username, ['/user/space/view', 'id' => $message->from_id], ['rel' => 'author']);
+    $form = Html::a($message->from->name, ['/user/space/view', 'id' => $message->from_id], ['rel' => 'author']);
     $to = Html::a(Yii::t('message', 'You'), ['/user/space/view', 'id' => $message->user_id], ['rel' => 'author']);
 } else {//你对别人说
     $form = Html::a(Yii::t('message', 'You'), ['/user/space/view', 'id' => $message->from_id], ['rel' => 'author']);
-    $to = Html::a($message->user->username, ['/user/space/view', 'id' => $message->user_id], ['rel' => 'author']);
+    $to = Html::a($message->user->name, ['/user/space/view', 'id' => $message->user_id], ['rel' => 'author']);
 }
 ?>
 

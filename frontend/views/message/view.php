@@ -12,9 +12,9 @@ $this->title = Yii::t('message', 'Message Inbox');
 //$this->params['breadcrumbs'][] = $this->title;
 
 if ($model->isRecipient()) {//收件人是自己
-    $dialogue = Html::a($model->from->username, ['/user/space/view', 'id' => $model->from_id], ['rel' => 'author']);
+    $dialogue = Html::a($model->from->name, ['/user/space/view', 'id' => $model->from_id], ['rel' => 'author']);
 } else {
-    $dialogue = Html::a($model->user->username, ['/user/space/view', 'id' => $model->user_id], ['rel' => 'author']);
+    $dialogue = Html::a($model->user->name, ['/user/space/view', 'id' => $model->user_id], ['rel' => 'author']);
 }
 ?>
 <div class="row">
