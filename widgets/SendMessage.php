@@ -1,6 +1,6 @@
 <?php
 
-namespace yuncms\message\frontend\widgets;
+namespace yuncms\message\widgets;
 
 use yii\base\Widget;
 use yii\base\InvalidConfigException;
