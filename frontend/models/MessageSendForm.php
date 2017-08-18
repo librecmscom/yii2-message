@@ -4,6 +4,7 @@
  * @copyright Copyright (c) 2012 TintSoft Technology Co. Ltd.
  * @license http://www.tintsoft.com/license/
  */
+
 namespace yuncms\message\frontend\models;
 
 use Yii;
@@ -25,7 +26,7 @@ class MessageSendForm extends Model
     /**
      * @var string 用户名
      */
-    public $name;
+    public $username;
 
     /**
      * @var string 消息内容
@@ -40,9 +41,9 @@ class MessageSendForm extends Model
     public function rules()
     {
         return [
-            [['message', 'name'], 'required'],
-            [['name', 'message'], 'filter', 'filter' => 'trim'],
-            ['name', 'validateUsername'],
+            [['message', 'username'], 'required'],
+            [['username', 'message'], 'filter', 'filter' => 'trim'],
+            ['username', 'validateUsername'],
         ];
     }
 
@@ -102,7 +103,7 @@ class MessageSendForm extends Model
     {
         if ($this->_user === null) {
             $userClass = Yii::$app->user->identityClass;
-            $this->_user = $userClass::findOne(['name'=>$this->name]);
+            $this->_user = $userClass::findOne(['username' => $this->username]);
         }
         return $this->_user;
     }

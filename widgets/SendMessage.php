@@ -18,14 +18,14 @@ class SendMessage extends Widget
     /**
      * @var string 收件人用户名
      */
-    public $name;
+    public $username;
 
     /** @inheritdoc */
     public function init()
     {
         parent::init();
-        if (empty ($this->name)) {
-            throw new InvalidConfigException ('The "name" property must be set.');
+        if (empty ($this->username)) {
+            throw new InvalidConfigException ('The "username" property must be set.');
         }
     }
 
@@ -34,7 +34,7 @@ class SendMessage extends Widget
     public function run()
     {
         $model = new MessageSendForm();
-        $model->name = $this->name;
+        $model->username = $this->username;
         return $this->render('send_message', [
             'model' => $model
         ]);

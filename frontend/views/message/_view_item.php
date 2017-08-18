@@ -2,12 +2,12 @@
 use yii\helpers\Html;
 use yii\helpers\Url;
 if ($model->isRecipient()) {//收件人是自己 别人对你说
-    $form = Html::a($model->from->name, ['/user/space/view', 'id' => $model->from_id], ['rel' => 'author']);
+    $form = Html::a($model->from->username, ['/user/space/view', 'id' => $model->from_id], ['rel' => 'author']);
     $to = Html::a(Yii::t('message', 'You'), ['/user/space/view', 'id' => $model->user_id], ['rel' => 'author']);
 
 } else {//你对别人说
     $form = Html::a(Yii::t('message', 'You'), ['/user/space/view', 'id' => $model->from_id], ['rel' => 'author']);
-    $to = Html::a($model->user->name, ['/user/space/view', 'id' => $model->user_id], ['rel' => 'author']);
+    $to = Html::a($model->user->username, ['/user/space/view', 'id' => $model->user_id], ['rel' => 'author']);
 }
 ?>
 <div class="media-left">

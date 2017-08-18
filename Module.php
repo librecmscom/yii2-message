@@ -34,6 +34,9 @@ class Module extends \yii\base\Module
     public $mailSender;
 
 
+    /**
+     * 初始化
+     */
     public function init()
     {
         parent::init();
