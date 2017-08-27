@@ -40,7 +40,7 @@ class MessageController extends Controller
                     [
                         'allow' => true,
                         'actions' => ['unread-messages'],
-                        'roles' => ['@', '?']
+                        'roles' => ['@']
                     ],
                 ],
             ],

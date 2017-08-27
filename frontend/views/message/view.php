@@ -18,7 +18,7 @@ if ($model->isRecipient()) {//收件人是自己
 }
 ?>
 <div class="row">
-    <div class="col-xs-12 col-md-9 main">
+    <div class="col-xs-12 col-md-12 main">
         <h2 class="h3 profile-title">
             <?= Yii::t('message', 'Dialogue in {dialogue}', ['dialogue' => $dialogue]); ?>
             <div class="pull-right">
@@ -55,8 +55,5 @@ if ($model->isRecipient()) {//收件人是自己
                 <?php ActiveForm::end(); ?>
             </div>
         </div>
-    </div>
-    <div class="col-xs-12 col-md-3 side">
-        <?= $this->render('@yuncms/user/frontend/views/_right_menu') ?>
     </div>
 </div>

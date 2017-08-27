@@ -7,7 +7,7 @@ $this->title = Yii::t('message', 'My Message Inbox');
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="row">
-    <div class="col-xs-12 col-md-9 main">
+    <div class="col-xs-12 col-md-12 main">
         <h2 class="h3 profile-title">
             <?= Yii::t('message', 'My Message') ?>
             <div class="pull-right">
@@ -28,9 +28,5 @@ $this->title = Yii::t('message', 'My Message Inbox');
                 ]); ?>
             </div>
         </div>
-    </div>
-
-    <div class="col-xs-12 col-md-3 side">
-        <?= $this->render('@yuncms/user/frontend/views/_right_menu') ?>
     </div>
 </div>
