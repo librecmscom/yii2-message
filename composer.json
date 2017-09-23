@@ -1,51 +1,56 @@
 {
-    "name": "yuncms/yii2-message",
-    "description": "The message module for Yii",
-    "keywords": ["yii2", "yii2-message", "message management"],
-    "type": "yii2-extension",
-    "license": "MIT",
-    "require": {
-        "yiisoft/yii2": "~2.0.6",
-        "yiisoft/yii2-swiftmailer": "~2.0",
-        "yiisoft/yii2-bootstrap": "~2.0",
-        "yuncms/yii2-user": "~2.0"
+  "name": "yuncms/yii2-message",
+  "description": "The message module for Yii",
+  "keywords": [
+    "yii2",
+    "yii2-message",
+    "message management"
+  ],
+  "type": "yii2-extension",
+  "license": "MIT",
+  "require": {
+    "yiisoft/yii2": "~2.0.6",
+    "yiisoft/yii2-swiftmailer": "~2.0",
+    "yiisoft/yii2-bootstrap": "~2.0",
+    "yuncms/yii2-user": "~2.0"
+  },
+  "require-dev": {
+    "yiisoft/yii2-codeception": "^2.0.0",
+    "codeception/specify": "^0.4.3",
+    "codeception/verify": "^0.3.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "yuncms\\message\\": ""
+    }
+  },
+  "extra": {
+    "yuncms": {
+      "name": "message",
+      "i18n": {
+        "class": "yii\\i18n\\PhpMessageSource",
+        "sourceLanguage": "en-US",
+        "basePath": "@yuncms/message/message"
+      },
+      "migrationNamespace": "yuncms\\message\\migrations",
+      "backend": {
+      },
+      "frontend": {
+        "class": "yuncms\\message\\frontend\\Module"
+      }
     },
-    "require-dev": {
-        "yiisoft/yii2-codeception": "^2.0.0",
-        "codeception/specify": "^0.4.3",
-        "codeception/verify": "^0.3.1"
+    "branch-alias": {
+      "dev-master": "2.0-dev"
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
     },
-    "autoload": {
-        "psr-4": {
-            "yuncms\\message\\": ""
-        }
-    },
-    "extra": {
-        "yuncms": {
-            "name": "message",
-            "i18n": {
-                "class": "yii\\i18n\\PhpMessageSource",
-                "basePath": "@yuncms/message/message"
-            },
-            "migrationNamespace": "yuncms\\message\\migrations",
-            "backend": {
-            },
-            "frontend": {
-                "class": "yuncms\\message\\frontend\\Module"
-            }
-        },
-        "branch-alias": {
-            "dev-master": "2.0-dev"
-        }
-    },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
-        },
-        {
-            "type": "composer",
-            "url": "https://packagist.phpcomposer.com"
-        }
-    ]
+    {
+      "type": "composer",
+      "url": "https://packagist.phpcomposer.com"
+    }
+  ]
 }
