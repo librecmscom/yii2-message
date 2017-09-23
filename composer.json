@@ -27,7 +27,7 @@
                 "class": "yii\\i18n\\PhpMessageSource",
                 "basePath": "@yuncms/message/message"
             },
-            "migrationNamespace": "yuncms/message/migrations",
+            "migrationNamespace": "yuncms\\message\\migrations",
             "backend": {
             },
             "frontend": {
