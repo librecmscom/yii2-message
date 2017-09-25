@@ -24,9 +24,9 @@ class MessageSendForm extends Model
     public $user_id;
 
     /**
-     * @var string 用户名
+     * @var string 用户昵称
      */
-    public $username;
+    public $nickname;
 
     /**
      * @var string 消息内容
@@ -41,9 +41,9 @@ class MessageSendForm extends Model
     public function rules()
     {
         return [
-            [['message', 'username'], 'required'],
-            [['username', 'message'], 'filter', 'filter' => 'trim'],
-            ['username', 'validateUsername'],
+            [['message', 'nickname'], 'required'],
+            [['nickname', 'message'], 'filter', 'filter' => 'trim'],
+            ['nickname', 'validateNickname'],
         ];
     }
 
@@ -54,7 +54,7 @@ class MessageSendForm extends Model
     {
         return [
             'user_id' => Yii::t('message', 'User ID'),
-            'username' => Yii::t('message', 'Username'),
+            'nickname' => Yii::t('message', 'Nickname'),
             'message' => Yii::t('message', 'Message Body'),
         ];
     }
@@ -103,7 +103,7 @@ class MessageSendForm extends Model
     {
         if ($this->_user === null) {
             $userClass = Yii::$app->user->identityClass;
-            $this->_user = $userClass::findOne(['username' => $this->username]);
+            $this->_user = $userClass::findOne(['nickname' => $this->nickname]);
         }
         return $this->_user;
     }

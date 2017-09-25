@@ -39,7 +39,7 @@ return [
     'The requested page does not exist.' => '请求的页面不存在！',
     'Unread' => '未读',
     'User ID' => '用户ID',
-    'Username' => '用户名',
+    'Nickname' => '用户昵称',
     'You' => '你',
     'You enter the user name does not exist oh！' => '你输入的用户名不存在哦！',
     '{form} say to {to}' => '{form} 对 {to} 说',

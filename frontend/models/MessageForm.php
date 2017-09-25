@@ -20,7 +20,7 @@ class MessageForm extends Model
 
     public $parent;
     public $message;
-    public $username;
+    public $nickname;
 
     /**
      * @inheritdoc
@@ -34,7 +34,7 @@ class MessageForm extends Model
             ['parent', 'filter', 'filter' => 'trim'],
             ['parent', 'required'],
 
-            ['username', 'filter', 'filter' => 'trim'],
+            ['nickname', 'filter', 'filter' => 'trim'],
         ];
     }
 
@@ -68,7 +68,7 @@ class MessageForm extends Model
             } else {
                 /** @var \yuncms\user\models\User $userClass */
                 $userClass = Yii::$app->user->identityClass;
-                $user = $userClass::findByEmailOrMobile($this->username);
+                $user = $userClass::findOne(['nickname' => $this->nickname]);
                 $new->user_id = $user->id;
             }
             return $new->save();

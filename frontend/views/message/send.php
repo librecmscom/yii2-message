@@ -21,7 +21,7 @@ $this->title = Yii::t('message', 'Send Message');
         <div class="row">
             <div class="col-md-12">
                 <?php $form = ActiveForm::begin(); ?>
-                <?= $form->field($model, 'username')->label(Yii::t('message','Username'))->input('', ['placeholder' => Yii::t('message','Please enter a user name')]); ?>
+                <?= $form->field($model, 'nickname')->label(Yii::t('message','Username'))->input('', ['placeholder' => Yii::t('message','Please enter a user name')]); ?>
                 <?= $form->field($model, 'message')->label(Yii::t('message','Message content'))->textarea(['placeholder' => Yii::t('message','Please enter the message content')]) ?>
                 <div class="form-group">
                     <?= Html::submitButton(Yii::t('message','Send Message'), ['class' => 'btn btn-primary']) ?>
