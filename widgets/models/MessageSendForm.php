@@ -64,7 +64,7 @@ class MessageSendForm extends Model
      * @param string $attribute
      * @param array $params
      */
-    public function validateUsername($attribute, $params)
+    public function validateNickname($attribute, $params)
     {
         if (!$this->hasErrors()) {
             if (!$this->_user) {
