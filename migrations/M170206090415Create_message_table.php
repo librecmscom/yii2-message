@@ -15,8 +15,8 @@ class M170206090415Create_message_table extends Migration
         }
         $this->createTable('{{%message}}', [
             'id' => $this->primaryKey(),
-            'from_id' => $this->integer()->notNull(),
-            'user_id' => $this->integer()->notNull(),
+            'from_id' => $this->integer()->unsigned()->notNull(),
+            'user_id' => $this->integer()->unsigned()->notNull(),
             'parent' => $this->integer(),
             'message' => $this->string(750)->notNull(),
             'status' => $this->boolean()->defaultValue(false),
